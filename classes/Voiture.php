@@ -33,4 +33,9 @@ class Voiture
   {
     echo "Je roule en caisse";
   }
+
+  public function __destruct()
+  {
+    echo "<h1>Je suis destroyed</h1>";
+  }
 }
