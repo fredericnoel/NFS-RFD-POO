@@ -3,7 +3,7 @@
 class Voiture
 {
   public $nbrRoues;
-  public $nbrPlaces;
+  private $nbrPlaces = 5;
   public $masse;
   public $vitesse = 0;
   public $couleur;
@@ -12,6 +12,16 @@ class Voiture
   {
     $this->masse = abs($m);
     $this->couleur = $c;
+  }
+
+  public function getNbrPlaces()
+  {
+    return $this->nbrPlaces;
+  }
+
+  public function setNbrPlaces($p)
+  {
+    $this->nbrPlaces = $p;
   }
 
   public function calculerEnergieCinetique()
